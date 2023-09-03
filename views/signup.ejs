@@ -1,0 +1,304 @@
+<style>
+  body {
+    background-color: black;
+  }
+  section {
+    background-color: aliceblue;
+  }
+  @media (min-width: 1025px) {
+    .h-custom {
+      height: 100vh !important;
+    }
+  }
+</style>
+
+<section>
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-8 col-xl-6">
+        <div class="card rounded-3">
+          <img
+            src="/images/slide5.jpg"
+            class="w-100"
+            style="
+              border-top-left-radius: 0.3rem;
+              border-top-right-radius: 0.3rem;
+            "
+            alt="Sample photo"
+          />
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-2 text-center mb-2">Join The Cybelians</h3>
+            <br />
+            <form class="px-md-2" method="post" action="/signup">
+              <%- include("./partials/messages") %>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-outline mb-4">
+                    <input
+                      required
+                      name="firstname"
+                      type="text"
+                      id="form3Example1q"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q"
+                      >First Name</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="lastname"
+                      required
+                      type="text"
+                      id="form3Example1q1"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q1"
+                      >Last Name</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="age"
+                      required
+                      type="number"
+                      id="form3Example1q2"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q2">Age</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="email"
+                      required
+                      type="email"
+                      id="form3Example1q13"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q13"
+                      >E-mail</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="gender"
+                      required
+                      type="text"
+                      id="form3Example1q14"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q14"
+                      >Gender</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <select
+                  required
+                  name="marriageType"
+                  class="select form-control"
+                >
+                  <option>Marriage Type</option>
+                  <option value="Loving relationship">
+                    Loving relationship
+                  </option>
+                  <option value="Cuckolding relationship (Non-Loving)">
+                    Cuckolding relationship (Non-Loving)
+                  </option>
+                </select>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="country"
+                      required
+                      id="form3Example1q5"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q5"
+                      >Country</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="town"
+                      required
+                      type="text"
+                      id="form3Example1q15"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q15"
+                      >Town</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="city"
+                      required
+                      type="text"
+                      id="form3Example1q16"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q16"
+                      >City</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="homeAddress"
+                      required
+                      type="text"
+                      id="form3Example1q16"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q16"
+                      >Home Address</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="referralName"
+                      required
+                      type="text"
+                      id="form3Example1q17"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q17"
+                      >Referral Name</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="referralPhone"
+                      required
+                      type="text"
+                      id="form3Example1q18"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q18"
+                      >Phone Number</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="referralAddress"
+                      required
+                      type="text"
+                      id="form3Example1q18"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q18"
+                      >Address</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <hr class="mx-n3" />
+              <div>
+                <h4 class="mb-0">Attach Document</h4>
+              </div>
+              <div class="row py-3">
+                <div class="col-md-12 pe-5">
+                  <input
+                    class="form-control form-control-lg"
+                    id="formFileLg"
+                    type="file"
+                    required
+                  />
+                  <div class="small text-muted mt-2">
+                    Front Image of a valid ID
+                  </div>
+                </div>
+              </div>
+              <div class="row py-3">
+                <div class="col-md-12 pe-5">
+                  <input
+                    class="form-control form-control-lg"
+                    id="formFileLg"
+                    type="file"
+                    required
+                  />
+                  <div class="small text-muted mt-2">
+                    Back Image of a valid ID
+                  </div>
+                </div>
+              </div>
+              <hr class="mx-n3" />
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="password"
+                      required
+                      type="password"
+                      id="form3Example1q30"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q30"
+                      >Password</label
+                    >
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-outline mb-4">
+                    <input
+                      name="password2"
+                      required
+                      type="password"
+                      id="form3Example1q30"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form3Example1q30"
+                      >Enter Password again</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6"></div>
+              </div>
+
+              <button
+                style="width: 100%"
+                type="submit"
+                class="btn btn-success btn-lg mb-1"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
