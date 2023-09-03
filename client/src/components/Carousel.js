@@ -4,6 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel styles
 import { Link } from 'react-router-dom';
 
+
 const ImageCarousel = () => {
     return (
         <div className='showcase-wrap'>
@@ -33,8 +34,9 @@ const ImageCarousel = () => {
             <div className='showcase'>
                 <h1>The Cybelian Organization</h1>
                 <h2>Worldwide Cybelian Movement</h2>
-                <a to="/signup" class="action">BECOME A MEMBER</a>
-                <a href="/signin" class="action">Login</a>
+                <br />
+                <a href="/signup" className="action">BECOME A MEMBER</a>
+                <a href="/signin" className="action">LOGIN</a>
             </div>
         </div>
     );
