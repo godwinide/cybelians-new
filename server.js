@@ -48,7 +48,7 @@ const PORT = process.env.PORT || 2022;
 // app.use("*", require("./routes/down"))
 app.use("/", require("./routes/auth"));
 app.use("/", require("./routes/user"));
-app.use("", (req, res) => {
+app.use("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"))
 })
 
