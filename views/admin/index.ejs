@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard | BillionsXchangetrading</title>
+    <title>Dashboard | Cybelian</title>
 
     <!-- Fontfaces CSS-->
     <link href="/css/font-face.css" rel="stylesheet" media="all">
@@ -44,18 +44,7 @@
     <div class="page-wrapper">
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar2">
-            <div class="logo">
-                <a href="/#">
-                    <img src="/images/icon/logo-white.png" alt="Cool Admin" />
-                </a>
-            </div>
             <div class="menu-sidebar2__content js-scrollbar1">
-                <div class="account2">
-                    <div class="image img-cir img-120">
-                        <img src="/images/icon/avatar-big-01.jpg" alt="John Doe" />
-                    </div>
-                    <a href="/admin/signout">Sign out</a>
-                </div>
                 <nav class="navbar-sidebar2">
                     <ul class="list-unstyled navbar__list">
                         <li>
@@ -83,11 +72,6 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap2">
-                            <div class="logo d-block d-lg-none">
-                                <a href="/#">
-                                    <img src="/images/icon/logo-white.png" alt="CoolAdmin" />
-                                </a>
-                            </div>
                             <div class="header-button-item mr-0 js-sidebar-btn">
                                 <i class="zmdi zmdi-menu"></i>
                             </div>
@@ -96,19 +80,7 @@
                 </div>
             </header>
             <aside class="menu-sidebar2 js-right-sidebar d-block d-lg-none">
-                <div class="logo">
-                    <a href="/#">
-                        <img src="/images/icon/logo-white.png" alt="Cool Admin" />
-                    </a>
-                </div>
                 <div class="menu-sidebar2__content js-scrollbar2">
-                    <div class="account2">
-                        <div class="image img-cir img-120">
-                            <img src="/images/icon/avatar-big-01.jpg" alt="John Doe" />
-                        </div>
-                        <h4 class="name">john doe</h4>
-                        <a href="/admin/signout">Sign out</a>
-                    </div>
                     <nav class="navbar-sidebar2">
                         <ul class="list-unstyled navbar__list">
                             <li>
@@ -156,80 +128,13 @@
             </section>
             <!-- END BREADCRUMB-->
 
-            <!-- STATISTIC-->
-            <section class="statistic">
-                <div class="section__content section__content--p30">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">
-                                        <%=customers.length%>
-                                    </h2>
-                                    <span class="desc">Users</span>
-                                    <div class="icon">
-                                        <i class="zmdi zmdi-account-o"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3">
-                                <div class="statistic__item">
-                                    <h2 class="number">$<%=total_bal%>
-                                    </h2>
-                                    <span class="desc">Total Available Balance</span>
-                                    <div class="icon">
-                                        <i class="zmdi zmdi-money"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- END STATISTIC-->
-
-            <section>
-                <div class="table-responsive m-b-40">
-                    <h3>Recent 10 Transactions</h3>
-                    <table class="table table-borderless table-data3">
-                        <thead>
-                            <tr>
-                                <th>date</th>
-                                <th>type</th>
-                                <th>account</th>
-                                <th>amount</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <%history.map(h=> {%>
-                                <tr>
-                                    <td>
-                                        <%=h.date%>
-                                    </td>
-                                    <td>
-                                        <%=h.type%>
-                                    </td>
-                                    <td>
-                                        <%=h.account%>
-                                    </td>
-                                    <td>$<%=h.amount.toFixed(2)%>
-                                    </td>
-                                </tr>
-                                <%})%>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
             <section>
                 <div class="table-responsive m-b-40">
                     <h3>Users</h3>
                     <table id="example" class="table table-borderless table-data3">
                         <thead>
                             <tr>
-                                <th>Full Name</th>
-                                <th>Username</th>
-                                <th>Balance</th>
+                                <th>Email</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -237,21 +142,12 @@
 
                             <%customers.map(c=> {%>
                                 <tr>
+   
                                     <td>
                                         <a href="/admin/edit-user/<%=c._id%>"
                                             style="text-decorstion: none; color: black;">
-                                            <%=c.fullname%>
+                                            <%=c.email%>
                                         </a>
-                                    </td>
-                                    <td>
-                                        <a href="/admin/edit-user/<%=c._id%>"
-                                            style="text-decorstion: none; color: black;">
-                                            <%=c.username%>
-                                    </td>
-                                    </a>
-                                    <td>
-                                        <%= c.currency%>
-                                            <%=c.balance%>
                                     </td>
                                     <td>
                                         <a href="/admin/edit-user/<%=c._id%>" class="btn btn-secondary">More</a>
@@ -269,7 +165,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>Copyright © 2021 BillionsXchangetrading.</p>
+                                <p>Copyright © 2021 Cybelian.</p>
                             </div>
                         </div>
                     </div>

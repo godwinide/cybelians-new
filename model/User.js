@@ -61,6 +61,11 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
+    isAdmin: {
+        type: Boolean,
+        required: false,
+        default: false
+    },
     userIP: {
         type: String,
         required: true

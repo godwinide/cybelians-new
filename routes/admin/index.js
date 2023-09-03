@@ -7,9 +7,7 @@ const bcrypt = require("bcryptjs/dist/bcrypt");
 router.get("/", ensureAdmin, async (req, res) => {
     try {
         const customers = await User.find({ isAdmin: false });
-        const history = await History.find({});
-        const total_bal = customers.reduce((prev, cur) => prev + Number(cur.balance), 0);
-        return res.render("admin/index", { layout: "admin/layout", pageTitle: "Welcome", customers, history, total_bal, req });
+        return res.render("admin/index", { layout: "admin/layout", pageTitle: "Welcome", customers, req });
     }
     catch (err) {
         return res.redirect("/admin");
@@ -31,46 +29,34 @@ router.post("/edit-user/:id", ensureAdmin, async (req, res) => {
     try {
         const { id } = req.params;
         const {
+            firstname,
+            lastname,
+            age,
             email,
-            username,
-            phone,
-            currency,
+            gender,
+            marriageType,
             country,
-            security_question,
-            security_answer,
-            balance,
-            total_deposit,
-            active_deposit,
-            last_deposit,
-            total_earned,
-            last_withdraw,
-            total_withdraw,
-            pending_withdrawal,
-            debt,
-            userIP,
-            account_plan,
-            pin
+            town,
+            city,
+            homeAddress,
+            referralName,
+            referralAddress,
+            referralPhone
         } = req.body;
         await User.updateOne({ _id: id }, {
+            firstname,
+            lastname,
+            age,
             email,
-            username,
-            phone,
-            currency,
+            gender,
+            marriageType: marriageType || "",
             country,
-            security_question,
-            security_answer,
-            last_withdraw,
-            last_deposit,
-            userIP,
-            pending_withdrawal: pending_withdrawal || 0,
-            balance: balance || 0,
-            pin: pin || Number(String(Math.random()).slice(2, 8)),
-            total_deposit: total_deposit || 0,
-            total_earned: total_earned || 0,
-            active_deposit: active_deposit || 0,
-            total_withdraw: total_withdraw || 0,
-            debt: debt || 0,
-            account_plan: account_plan || "STARTER ($1,000 - $10,000)"
+            town,
+            city,
+            homeAddress,
+            referralName,
+            referralAddress,
+            referralPhone
         });
         req.flash("success_msg", "account updated");
         return res.redirect("/admin/edit-user/" + id);

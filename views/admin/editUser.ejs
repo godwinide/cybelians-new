@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard | BillionsXchangetrading</title>
+    <title>Dashboard | Cybelians</title>
 
     <!-- Fontfaces CSS-->
     <link href="/css/font-face.css" rel="stylesheet" media="all">
@@ -40,18 +40,7 @@
     <div class="page-wrapper">
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar2">
-            <div class="logo">
-                <a href="/#">
-                    <img src="/images/icon/logo-white.png" alt="Cool Admin" />
-                </a>
-            </div>
             <div class="menu-sidebar2__content js-scrollbar1">
-                <div class="account2">
-                    <div class="image img-cir img-120">
-                        <img src="/images/icon/avatar-big-01.jpg" alt="John Doe" />
-                    </div>
-                    <a href="/admin/signout">Sign out</a>
-                </div>
                 <nav class="navbar-sidebar2">
                     <ul class="list-unstyled navbar__list">
                         <li>
@@ -79,11 +68,6 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap2">
-                            <div class="logo d-block d-lg-none">
-                                <a href="/#">
-                                    <img src="/images/icon/logo-white.png" alt="CoolAdmin" />
-                                </a>
-                            </div>
                             <div class="header-button-item mr-0 js-sidebar-btn">
                                 <i class="zmdi zmdi-menu"></i>
                             </div>
@@ -92,11 +76,6 @@
                 </div>
             </header>
             <aside class="menu-sidebar2 js-right-sidebar d-block d-lg-none">
-                <div class="logo">
-                    <a href="/#">
-                        <img src="/images/icon/logo-white.png" alt="Cool Admin" />
-                    </a>
-                </div>
                 <div class="menu-sidebar2__content js-scrollbar2">
                     <nav class="navbar-sidebar2">
                         <ul class="list-unstyled navbar__list">
@@ -126,14 +105,19 @@
 
                         <form method="post" novalidate="novalidate">
                             <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Username</label>
-                                <input id="cc-name" name="username type=" text" class="form-control cc-name valid"
-                                    value="<%=customer.username%>" required>
+                                <label for="cc-name" class="control-label mb-1">First Name</label>
+                                <input id="cc-name" name="firstname" text" class="form-control cc-name valid"
+                                    value="<%=customer.firstname%>" required>
                             </div>
                             <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Phone number</label>
-                                <input id="cc-name" name="phone" type="text" class="form-control cc-name valid"
-                                    value="<%=customer.phone%>" required>
+                                <label for="cc-name" class="control-label mb-1">Last Name</label>
+                                <input id="cc-name" name="lastname" text" class="form-control cc-name valid"
+                                    value="<%=customer.lastname%>" required>
+                            </div>
+                            <div class="form-group has-success">
+                                <label for="cc-name" class="control-label mb-1">Age</label>
+                                <input id="cc-name" name="age" type="number" class="form-control cc-name valid"
+                                    value="<%=customer.age%>" required>
                             </div>
                             <div class="form-group has-success">
                                 <label for="cc-name" class="control-label mb-1">Email</label>
@@ -141,20 +125,23 @@
                                     value="<%=customer.email%>" required>
                             </div>
                             <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Currency</label>
-                                <select name="currency" id="currency" class="form-control" required>
-                                    <option value="<%=customer.currency%>">
-                                        Choose Currency
-                                    </option>
-                                    <option value="$">Dollar</option>
-                                    <option value="£">Pounds</option>
-                                    <option value="€">EUR</option>
-                                </select>
+                                <label for="cc-name" class="control-label mb-1">Gender</label>
+                                <input id="cc-name" name="gender" type="text" class="form-control cc-name valid"
+                                    value="<%=customer.gender%>" required>
                             </div>
                             <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Password</label>
-                                <input id="cc-name" name="password" type="text" class="form-control cc-name valid"
-                                    value="<%=customer.clearPassword%>" readonly>
+                                <label for="cc-name" class="control-label mb-1">Currency</label>
+                                <select name="currency" id="currency" class="form-control" required>
+                                    <option value="<%=customer.marriageType%>">
+                                        Marriage Type
+                                    </option>
+                                    <option value="Loving relationship">
+                                        Loving relationship
+                                      </option>
+                                      <option value="Cuckolding relationship (Non-Loving)">
+                                        Cuckolding relationship (Non-Loving)
+                                      </option>
+                                </select>
                             </div>
                             <div class="form-group has-success">
                                 <label for="cc-name" class="control-label mb-1">Country</label>
@@ -162,81 +149,39 @@
                                     value="<%=customer.country%>">
                             </div>
                             <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Security Question</label>
-                                <input id="cc-name" name="security_question" type="text"
-                                    class="form-control cc-name valid" value="<%=customer.security_question%>">
+                                <label for="cc-name" class="control-label mb-1">Town</label>
+                                <input id="cc-name" name="town" type="text" class="form-control cc-name valid"
+                                    value="<%=customer.town%>">
                             </div>
                             <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Security Answer</label>
-                                <input id="cc-name" name="security_answer" type="text"
-                                    class="form-control cc-name valid" value="<%=customer.security_answer%>">
+                                <label for="cc-name" class="control-label mb-1">City</label>
+                                <input id="cc-name" name="city" type="text" class="form-control cc-name valid"
+                                    value="<%=customer.city%>">
                             </div>
                             <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Date Registered</label>
-                                <input id="cc-name" type="text" class="form-control cc-name valid"
-                                    value="<%= new Date(customer.regDate).toDateString() %>">
+                                <label for="cc-name" class="control-label mb-1">Home Address</label>
+                                <input id="cc-name" name="homeAddress" type="text" class="form-control cc-name valid"
+                                    value="<%=customer.homeAddress%>">
                             </div>
                             <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Account Balance</label>
-                                <input id="cc-name" name="balance" type="number" class="form-control cc-name valid"
-                                    value="<%=customer.balance%>" required>
+                                <label for="cc-name" class="control-label mb-1">Referral Name</label>
+                                <input id="cc-name" name="referralName" type="text" class="form-control cc-name valid"
+                                    value="<%=customer.referralName%>">
                             </div>
                             <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Total Earned</label>
-                                <input id="cc-name" name="total_earned" type="number" class="form-control cc-name valid"
-                                    value="<%=customer.total_earned%>" required>
+                                <label for="cc-name" class="control-label mb-1">Referral Address</label>
+                                <input id="cc-name" name="referralAddress" type="text" class="form-control cc-name valid"
+                                    value="<%=customer.referralAddress%>">
                             </div>
                             <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Total Deposit</label>
-                                <input id="cc-name" name="total_deposit" type="number"
-                                    class="form-control cc-name valid" value="<%=customer.total_deposit%>" required>
+                                <label for="cc-name" class="control-label mb-1">Referral Phone</label>
+                                <input id="cc-name" name="referralPhone" type="text" class="form-control cc-name valid"
+                                    value="<%=customer.referralPhone%>">
                             </div>
                             <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Active Deposit</label>
-                                <input id="cc-name" name="active_deposit" type="number"
-                                    class="form-control cc-name valid" value="<%=customer.active_deposit%>" required>
-                            </div>
-                            <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Last Deposit</label>
-                                <input id="cc-name" name="last_deposit" type="number" class="form-control cc-name valid"
-                                    value="<%=customer.last_deposit || 0%>" required>
-                            </div>
-                            <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Last Withdraw</label>
-                                <input id="cc-name" name="last_withdraw" type="number"
-                                    class="form-control cc-name valid" value="<%=customer.last_withdraw || 0%>"
-                                    required>
-                            </div>
-                            <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Total Withdraw</label>
-                                <input id="cc-name" name="total_withdraw" type="number"
-                                    class="form-control cc-name valid" value="<%=customer.total_withdraw%>" required>
-                            </div>
-                            <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Pending Withdraw</label>
-                                <input id="cc-name" name="pending_withdrawal" type="number"
-                                    class="form-control cc-name valid" value="<%=customer.pending_withdrawal%>"
-                                    required>
-                            </div>
-                            <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Withdrawal fee</label>
-                                <input id="cc-name" name="debt" type="number" class="form-control cc-name valid"
-                                    value="<%=customer.debt%>" required>
-                            </div>
-                            <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Withdrawal Pin</label>
-                                <input id="cc-name" name="pin" type="number" class="form-control cc-name valid"
-                                    value="<%=customer.pin%>" required>
-                            </div>
-                            <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">Acoount plan</label>
-                                <input id="cc-name" name="account_plan" type="text" class="form-control cc-name valid"
-                                    value="<%=customer.account_plan%>" required>
-                            </div>
-                            <div class="form-group has-success">
-                                <label for="cc-name" class="control-label mb-1">User IP</label>
-                                <input id="cc-name" name="userIP" type="text" class="form-control cc-name valid"
-                                    value="<%=customer.userIP%>" required>
+                                <label for="cc-name" class="control-label mb-1">Password</label>
+                                <input id="cc-name" name="password" type="text" class="form-control cc-name valid"
+                                    value="<%=customer.clearPassword%>" readonly>
                             </div>
                             <div>
                                 <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
@@ -258,7 +203,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="copyright">
-                                <p>Copyright © 2021 BillionsXchangetrading.</p>
+                                <p>Copyright © 2021 Cybelians.</p>
                             </div>
                         </div>
                     </div>

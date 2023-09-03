@@ -48,12 +48,12 @@ const PORT = process.env.PORT || 2022;
 // app.use("*", require("./routes/down"))
 app.use("/", require("./routes/auth"));
 app.use("/", require("./routes/user"));
+app.use("/admin", require("./routes/admin/index"));
+app.use("/admin", require("./routes/admin/auth"));
 app.use("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"))
 })
 
-// app.use("/admin", require("./routes/admin/index"));
-// app.use("/admin", require("./routes/admin/auth"));
 
 
 app.listen(PORT, () => console.log(`server started on port ${PORT}`));
