@@ -6,16 +6,15 @@ import { useAlert } from 'react-alert'
 function Prompt({ setOpen }) {
     const alert = useAlert()
     const [code, setCode] = useState('');
-    const code1 = 'BRX152Y';
-    const code2 = 'DG9C38Q'
+    const code1 = 'MONALISA';
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (code.trim().toUpperCase() === code1 || code.trim().toUpperCase() === code2) {
+        if (code.trim().toUpperCase() === code1) {
             setOpen(true);
         } else {
-            alert.error('Invalid Code');
+            alert.error('Invalid Referral Code');
         }
     };
 

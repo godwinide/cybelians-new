@@ -70,7 +70,7 @@ router.post('/signup', async (req, res) => {
                 firstname,
                 lastname,
                 age,
-                email,
+                email: email.toLowerCase(),
                 gender,
                 marriageType,
                 country,
